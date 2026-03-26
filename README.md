@@ -20,14 +20,17 @@ In Microsoft Teams, open the chat or channel where you want to receive messages,
 
 ### 2. Install
 
+From GitHub:
+
 ```bash
-npm install -g teams-reply-cli
+npm install -g github:bensonbs/teams-reply-cli
 ```
 
-Or run directly with npx:
+Or from a local clone:
 
 ```bash
-npx teams-reply-cli "Hello from CLI"
+git clone https://github.com/bensonbs/teams-reply-cli.git
+npm install -g ./teams-reply-cli
 ```
 
 ### 3. Set environment variable

@@ -19,14 +19,17 @@
 
 ### 2. 安裝
 
+從 GitHub 安裝：
+
 ```bash
-npm install -g teams-reply-cli
+npm install -g github:bensonbs/teams-reply-cli
 ```
 
-或直接用 npx 執行：
+或從本地 clone 安裝：
 
 ```bash
-npx teams-reply-cli "Hello from CLI"
+git clone https://github.com/bensonbs/teams-reply-cli.git
+npm install -g ./teams-reply-cli
 ```
 
 ### 3. 設定環境變數
