@@ -1,0 +1,24 @@
+{
+  "name": "teams-reply-cli",
+  "version": "1.0.0",
+  "description": "Send messages to Microsoft Teams chat via Power Automate webhook. Designed as a CLI bridge for AI agents like Claude Code.",
+  "type": "module",
+  "bin": {
+    "teams-reply": "./bin/teams-reply.mjs"
+  },
+  "keywords": [
+    "microsoft-teams",
+    "webhook",
+    "power-automate",
+    "cli",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
