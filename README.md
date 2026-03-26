@@ -8,7 +8,13 @@ Designed as a CLI bridge for AI agents (e.g. Claude Code) that can read Teams me
 
 ### 1. Create the Power Automate webhook
 
-In Microsoft Teams, add a **"Post to a channel when a webhook request is received"** workflow to your chat/channel. Copy the webhook URL.
+In Microsoft Teams, open the chat or channel where you want to receive messages, then:
+
+1. Click **"+" (Manage apps)** or **"..."** → **"Workflows"**
+2. Search for and select the **"Post to a channel when a webhook request is received"** template
+   - For group chats, use **"Send a webhook alert to a chat"** (將 Webhook 警示傳送至聊天)
+3. Follow the prompts to create the workflow
+4. Copy the generated **webhook URL** (it will include a `sig` parameter for authentication)
 
 ### 2. Install
 
