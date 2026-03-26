@@ -1,5 +1,28 @@
 #!/usr/bin/env node
 
+import { readFileSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// Load .env if TEAMS_WEBHOOK_URL is not already set
+// Search order: cwd → ~/.teams-reply-cli/.env
+if (!process.env.TEAMS_WEBHOOK_URL) {
+  const candidates = [
+    resolve(process.cwd(), ".env"),
+    resolve(process.env.HOME || "", ".teams-reply-cli", ".env"),
+  ];
+  for (const envPath of candidates) {
+    try {
+      const lines = readFileSync(envPath, "utf8").split("\n");
+      for (const line of lines) {
+        const match = line.match(/^\s*([\w]+)\s*=\s*(.*)\s*$/);
+        if (match && !process.env[match[1]]) process.env[match[1]] = match[2];
+      }
+      if (process.env.TEAMS_WEBHOOK_URL) break;
+    } catch {}
+  }
+}
+
 const WEBHOOK_URL = process.env.TEAMS_WEBHOOK_URL;
 
 if (!WEBHOOK_URL) {
