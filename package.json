@@ -18,6 +18,14 @@
     "type": "git",
     "url": ""
   },
+  "files": [
+    "bin",
+    ".claude-plugin",
+    "skills",
+    ".env.example",
+    "README.md",
+    "README.zh-TW.md"
+  ],
   "engines": {
     "node": ">=18.0.0"
   }

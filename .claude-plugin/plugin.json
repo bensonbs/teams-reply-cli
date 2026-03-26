@@ -1,0 +1,9 @@
+{
+  "name": "teams-reply-cli",
+  "description": "Send messages to Microsoft Teams chat via Power Automate webhook",
+  "version": "1.0.0",
+  "author": {
+    "name": "Benson Sung"
+  },
+  "license": "MIT"
+}
