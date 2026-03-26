@@ -1,5 +1,7 @@
 # teams-reply-cli
 
+[繁體中文](README.zh-TW.md)
+
 Send messages to Microsoft Teams chat via Power Automate webhook.
 
 Designed as a CLI bridge for AI agents (e.g. Claude Code) that can read Teams messages but can't reply directly.
